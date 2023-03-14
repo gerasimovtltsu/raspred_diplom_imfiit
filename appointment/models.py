@@ -30,6 +30,3 @@ class Record(models.Model):
     student_name = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name='ФИО студента')
     topic_title = models.ForeignKey(Topic, on_delete=models.CASCADE, verbose_name='Наименование темы')
     supervisor_name = models.ForeignKey(Supervisor, on_delete=models.CASCADE, verbose_name='ФИО руководителя')
-
-    def __str__(self):
-        return self.student_name
