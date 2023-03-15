@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %} {% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" />
 </head>
-<body>
-    <div class="container-fluid">
+<body class="text-center">
+    <div class="container-fluid vh-100">
         {% block content %}
         {% endblock %}
     </div>
+    {% include 'footer.html' %}
     <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/form_script.js" %}"></script>
 </body>
 </html>

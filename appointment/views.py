@@ -1,9 +1,11 @@
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 from .forms import RecordForm
+
 
 # Страница подтверждения записи
 def appointment_approve(request):
-    return render(request, 'thanks.html', {'text': 'Ваша запись учтена'})
+    return render(request, 'thanks.html', {'text': 'Ваша запись зарегистрирована'})
 
 def create_student(request):
     if request.method == 'POST':
