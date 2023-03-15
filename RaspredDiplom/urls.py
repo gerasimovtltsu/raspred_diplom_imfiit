@@ -21,6 +21,7 @@ app_name = 'RaspredDiplom'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/create/', appointview.create_student, name='create_student'),
+    path('', appointview.create_student, name='create_student'),
     # path('students/<int:pk>/', appointview.view_student, name='view_student'),
+    path('thanks', appointview.appointment_approve, name='appointment_approve'),
 ]
