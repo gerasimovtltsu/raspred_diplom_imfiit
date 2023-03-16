@@ -14,14 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path, re_path
 from appointment import views as appointview
 
 app_name = 'RaspredDiplom'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    re_path(r'^admin/', admin.site.urls),
     path('', appointview.create_student, name='create_student'),
     # path('students/<int:pk>/', appointview.view_student, name='view_student'),
-    path('thanks', appointview.appointment_approve, name='appointment_approve'), # страница для редиректа после записи
+    path('thanks', appointview.appointment_approve, name='appointment_approve'),  # страница для редиректа после записи
+    re_path(r'^changing', include('smart_selects.urls')),
 ]

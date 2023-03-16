@@ -3,10 +3,10 @@
 {% block title %}Запись на диплом{% endblock %}
 
 {% block content %}
-  <h1>Запись</h1>
   <form method="post" class="post-form">
     {% csrf_token %}
       <div class="mb-3">
+          {{ form.media.js }}
           {{ form.as_p }}
       </div>
     <button type="submit" class="btn btn-primary">Сохранить</button>
