@@ -12,7 +12,7 @@ class Supervisor(models.Model):
 
 class Topic(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название темы')
-    supervisor = models.ForeignKey(Supervisor, on_delete=models.CASCADE)
+    supervisor = models.ForeignKey(Supervisor, on_delete=models.CASCADE, verbose_name='ФИО руководителя')
     reserved_status = models.BooleanField(verbose_name='Статус резервирования')
 
     def __str__(self):
@@ -21,12 +21,12 @@ class Topic(models.Model):
 
 class Record(models.Model):
     student_name = models.CharField(max_length=255, verbose_name='ФИО студента')
-    supervisor_name = models.ForeignKey(Supervisor, on_delete=models.CASCADE, verbose_name='ФИО студента')
+    supervisor_name = models.ForeignKey(Supervisor, on_delete=models.CASCADE, verbose_name='ФИО руководителя')
     topic_title = ChainedForeignKey(
         Topic,
         chained_field="supervisor_name",
         chained_model_field="supervisor",
         show_all=False,
         auto_choose=True,
-        sort=True
+        sort=True,
     )

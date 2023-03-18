@@ -1,5 +1,8 @@
-from django.shortcuts import redirect, render
+from django.db.models import Q
+from .models import Record, Topic
 from .forms import RecordForm
+
+from django.shortcuts import redirect, render
 
 
 # Страница подтверждения записи

@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href={% static 'css/chota.min.css' %}>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body class="text-center">
-    <div class="container-fluid vh-100">
+<body>
+    <div class="container">
         <h1>Запись</h1>
         {% block content %}
         {% endblock %}
     </div>
     {% include 'footer.html' %}
-    <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static 'js/dark_mode.js' %}"></script>
 </body>
 </html>
