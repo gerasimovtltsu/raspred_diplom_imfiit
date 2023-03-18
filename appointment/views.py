@@ -3,13 +3,16 @@ from .models import Record, Topic
 from .forms import RecordForm
 
 from django.shortcuts import redirect, render
+from django.views.decorators.cache import never_cache
 
 
 # Страница подтверждения записи
+@never_cache
 def appointment_approve(request):
     return render(request, 'thanks.html', {'text': 'Ваша запись зарегистрирована'})
 
 
+@never_cache
 def create_student(request):
     if request.method == 'POST':
         form = RecordForm(request.POST)
