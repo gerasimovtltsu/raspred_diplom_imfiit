@@ -6,6 +6,9 @@ class Supervisor(models.Model):
     name = models.CharField(max_length=255, verbose_name='ФИО руководителя')
     degree = models.CharField(max_length=255, verbose_name='Ученая степень')
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -14,6 +17,9 @@ class Topic(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название темы')
     supervisor = models.ForeignKey(Supervisor, on_delete=models.CASCADE, verbose_name='ФИО руководителя')
     reserved_status = models.BooleanField(verbose_name='Статус резервирования')
+
+    class Meta:
+        ordering = ['title']
 
     def __str__(self):
         return self.title

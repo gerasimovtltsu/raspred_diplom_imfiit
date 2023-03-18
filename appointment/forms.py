@@ -15,8 +15,6 @@ class RecordForm(forms.ModelForm):
         self.fields['supervisor_name'].help_text = "Выберите руководителя из списка"
         self.fields['topic_title'].help_text = "Выберите тему"
 
-        # self.fields['topic_title'] =
-
         # задаем стили для полей
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'input__text'
