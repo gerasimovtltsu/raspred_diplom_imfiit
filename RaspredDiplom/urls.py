@@ -20,7 +20,7 @@ from appointment import views as appointview
 app_name = 'RaspredDiplom'
 
 urlpatterns = [
-    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^imfiit_manage/', admin.site.urls),
     path('', appointview.create_student, name='create_student'),
     # path('students/<int:pk>/', appointview.view_student, name='view_student'),
     path('thanks', appointview.appointment_approve, name='appointment_approve'),  # страница для редиректа после записи

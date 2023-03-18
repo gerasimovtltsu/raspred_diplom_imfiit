@@ -27,6 +27,7 @@ class Record(models.Model):
         chained_field="supervisor_name",
         chained_model_field="supervisor",
         show_all=False,
-        auto_choose=True,
+        auto_choose=False,
         sort=True,
+        limit_choices_to={'reserved_status': False}
     )

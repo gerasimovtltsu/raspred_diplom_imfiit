@@ -1,5 +1,5 @@
 from django import forms
-from .models import Record
+from .models import Record, Topic
 
 
 class RecordForm(forms.ModelForm):
@@ -8,12 +8,14 @@ class RecordForm(forms.ModelForm):
         # переопределение label для полей
         self.fields['student_name'].label = "ФИО студента"
         self.fields['supervisor_name'].label = "ФИО руководителя"
-        self.fields['topic_title'].label = "Название темы"
+        self.fields['topic_title'].label = "Доступные темы"
 
         # переопределение help_text для полей
         self.fields['student_name'].help_text = "Введите Ваши ФИО"
         self.fields['supervisor_name'].help_text = "Выберите руководителя из списка"
         self.fields['topic_title'].help_text = "Выберите тему"
+
+        # self.fields['topic_title'] =
 
         # задаем стили для полей
         for visible in self.visible_fields():
