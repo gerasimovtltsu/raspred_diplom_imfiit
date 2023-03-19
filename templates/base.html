@@ -15,7 +15,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Запись</h1>
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="brand" href="{% url 'create_student' %}" style="color: #eeeeee">Запись на диплом</a>
+            </div>
+        </nav>
         {% block content %}
         {% endblock %}
     </div>

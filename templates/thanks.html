@@ -3,7 +3,9 @@
 {% block title %}{{ text }}{% endblock %}
 
 {% block content %}
-  <div class="alert alert-success text-center">
-      {{ text }}
-  </div>
+    <div class="col">
+        <div class="card is-center bg-primary">
+          {{ text }}
+        </div>
+    </div>
 {% endblock %}

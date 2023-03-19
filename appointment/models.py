@@ -4,7 +4,7 @@ from smart_selects.db_fields import ChainedForeignKey
 
 class Supervisor(models.Model):
     name = models.CharField(max_length=255, verbose_name='ФИО руководителя')
-    degree = models.CharField(max_length=255, verbose_name='Ученая степень')
+    degree = models.CharField(max_length=255, verbose_name='Ученая степень', blank=True)
 
     class Meta:
         ordering = ['name']

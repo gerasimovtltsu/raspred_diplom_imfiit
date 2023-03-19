@@ -26,3 +26,9 @@ urlpatterns = [
     path('thanks', appointview.appointment_approve, name='appointment_approve'),  # страница для редиректа после записи
     re_path(r'^changing', include('smart_selects.urls')),
 ]
+
+# изменения для админки
+
+admin.site.site_header = "ИМФиИТ ТГУ"
+admin.site.site_title = "Панель администратора приложением"
+admin.site.index_title = ""  # сделаем пустую строку чтобы не показывало лишний title
