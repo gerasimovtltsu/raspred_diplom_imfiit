@@ -7,6 +7,8 @@ class Supervisor(models.Model):
     degree = models.CharField(max_length=255, verbose_name='Ученая степень', blank=True)
 
     class Meta:
+        verbose_name = 'Руководитель'
+        verbose_name_plural = 'Руководители'
         ordering = ['name']
 
     def __str__(self):
@@ -19,6 +21,8 @@ class Topic(models.Model):
     reserved_status = models.BooleanField(verbose_name='Статус резервирования')
 
     class Meta:
+        verbose_name = 'Тема'
+        verbose_name_plural = 'Темы'
         ordering = ['title']
 
     def __str__(self):
@@ -37,3 +41,7 @@ class Record(models.Model):
         sort=True,
         limit_choices_to={'reserved_status': False}
     )
+
+    class Meta:
+        verbose_name = 'Запись'
+        verbose_name_plural = 'Записи'
