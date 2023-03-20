@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% comment %} {% load i18n  eatn_tags static %} {% endcomment %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "ИМФиИТ ТГУ" %}{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        #branding h1 a {
+            color: white !important;
+        }
+    </style>
+{% endblock %}
+
+{% block branding %}
+    <h1>
+        <a href="{% url 'admin:index' %}">{{ site_header|default:_('Административная панель') }}</a>
+    </h1>
+{% endblock %}
