@@ -42,7 +42,7 @@ class ExportCsvMixin:
 class SupervisorAdmin(admin.ModelAdmin):
     list_display = ('name', 'degree')
     list_filter = ('name', 'degree')
-    search_fields = ('name', )
+    search_fields = ('name', 'degree')
 
 
 class TopicAdmin(admin.ModelAdmin):
@@ -54,7 +54,7 @@ class TopicAdmin(admin.ModelAdmin):
 class RecordAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ('student_name', 'topic_title', 'supervisor_name')
     list_filter = ('student_name', 'topic_title__title', 'supervisor_name__name')
-    search_fields = ('student_name', 'topic_title__title', 'supervisor_name__name')  # А как сделать поиск по темам и руководителям?
+    search_fields = ('student_name', 'topic_title__title', 'supervisor_name__name')
     actions = ["export_as_csv"]
 
 admin.site.register(Record, RecordAdmin)
