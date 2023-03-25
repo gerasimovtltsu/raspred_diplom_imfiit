@@ -5,6 +5,8 @@ from .forms import RecordForm
 from django.shortcuts import redirect, render
 from django.views.decorators.cache import never_cache
 
+from .models import Record
+
 
 # Страница подтверждения записи
 @never_cache

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,9 +26,9 @@ SECRET_KEY = 'django-insecure-q)b+ur3675-1_jf7bm98mf)63z0s_$cynbgmtbqsv6q(rt#pb_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
-USE_DJANGO_JQUERY = True
+# USE_DJANGO_JQUERY = True
 # JQUERY_URL = True
 
 
@@ -59,8 +60,7 @@ ROOT_URLCONF = 'RaspredDiplom.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],     
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
