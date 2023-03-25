@@ -47,8 +47,8 @@ class SupervisorAdmin(admin.ModelAdmin):
 
 class TopicAdmin(admin.ModelAdmin):
     list_display = ('title', 'supervisor', 'reserved_status')
-    list_filter = ('title', 'supervisor', 'reserved_status')
-    search_fields = ('title', 'supervisor')
+    list_filter = ('title', 'supervisor__name', 'reserved_status')
+    search_fields = ('title', 'supervisor__name')
 
 
 class RecordAdmin(admin.ModelAdmin, ExportCsvMixin):
