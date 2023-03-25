@@ -42,6 +42,7 @@ class ExportCsvMixin:
 class SupervisorAdmin(admin.ModelAdmin):
     list_display = ('name', 'degree')
     list_filter = ('name', 'degree')
+    search_fields = ('name', )
 
 
 class TopicAdmin(admin.ModelAdmin):
