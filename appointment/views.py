@@ -1,12 +1,9 @@
 from django.db.models import Q
-from .models import Record, Topic
-from .forms import RecordForm
-
 from django.shortcuts import redirect, render
 from django.views.decorators.cache import never_cache
 
-from .models import Record
-
+from .models import Record, Topic
+from .forms import RecordForm
 
 # Страница подтверждения записи
 @never_cache

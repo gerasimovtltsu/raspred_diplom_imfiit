@@ -26,11 +26,15 @@ SECRET_KEY = 'django-insecure-q)b+ur3675-1_jf7bm98mf)63z0s_$cynbgmtbqsv6q(rt#pb_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+match DEBUG:
+    case True:
+        ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
+    case _:
+        ALLOWED_HOSTS = []
+
 
 # USE_DJANGO_JQUERY = True
 # JQUERY_URL = True
-
 
 # Application definition
 
@@ -86,7 +90,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -117,6 +120,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+DATE_FORMAT = "j N Y" # формат даты
+DATETIME_FORMAT = "j N Y D, H:i"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
