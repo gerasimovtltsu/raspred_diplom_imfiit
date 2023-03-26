@@ -9,8 +9,7 @@ from .forms import RecordForm
 @never_cache
 def appointment_approve(request):
     return render(request, 'thanks.html', {'text': 'Ваша запись зарегистрирована'})
-
-
+    
 @never_cache
 def create_student(request, *args, **kwargs):
     form = RecordForm(request.POST or None)
