@@ -58,9 +58,9 @@ class RecordAdmin(admin.ModelAdmin, ExportCsvMixin):
     actions = ["export_as_csv"]
 
 class ArchiveAdmin(admin.ModelAdmin):
-    list_display = ('name', 'supervis_name', 'top_title')
-    list_filter = ('name', 'supervis_name', 'top_title')
-    search_fields = ('name', 'supervis_name', 'top_title')
+    list_display = ('name', 'supervis_name', 'top_title', 'date_post')
+    list_filter = ('name', 'supervis_name', 'top_title', 'date_post')
+    search_fields = ('name', 'supervis_name', 'top_title', 'date_post')
 
 admin.site.register(Record, RecordAdmin)
 admin.site.register(Supervisor, SupervisorAdmin)
