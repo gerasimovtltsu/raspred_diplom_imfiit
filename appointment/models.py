@@ -45,3 +45,6 @@ class Record(models.Model):
     class Meta:
         verbose_name = 'Запись'
         verbose_name_plural = 'Записи'
+
+    def __str__(self) -> str:
+        return self.student_name
