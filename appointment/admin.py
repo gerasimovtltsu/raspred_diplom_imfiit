@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.http import HttpResponse
 import csv
 
-from .models import Record, Supervisor, Topic
+from .models import Archive, Record, Supervisor, Topic
 
 # миксин для экспорта csv
 class ExportCsvMixin:
@@ -57,6 +57,12 @@ class RecordAdmin(admin.ModelAdmin, ExportCsvMixin):
     search_fields = ('student_name', 'topic_title__title', 'supervisor_name__name')
     actions = ["export_as_csv"]
 
+class ArchiveAdmin(admin.ModelAdmin):
+    list_display = ('name', 'supervis_name', 'top_title')
+    list_filter = ('name', 'supervis_name', 'top_title')
+    search_fields = ('name', 'supervis_name', 'top_title')
+
 admin.site.register(Record, RecordAdmin)
 admin.site.register(Supervisor, SupervisorAdmin)
 admin.site.register(Topic, TopicAdmin)
+admin.site.register(Archive, ArchiveAdmin)

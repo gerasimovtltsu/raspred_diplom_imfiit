@@ -48,3 +48,15 @@ class Record(models.Model):
 
     def __str__(self) -> str:
         return self.student_name
+
+# модель для хранения "Архива" записей
+
+class Archive(models.Model):
+   name = models.CharField(max_length=255, verbose_name='ФИО студента')
+   supervis_name = models.CharField(max_length=255, verbose_name='ФИО руководителя')
+   top_title = models.CharField(max_length=255, verbose_name='Название темы')
+   date_post = models.DateTimeField(auto_now_add=True, blank=True, verbose_name='Дата записи')
+   
+   class Meta:
+        verbose_name = 'Архив'
+        verbose_name_plural = 'Архивы'
