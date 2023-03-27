@@ -10,8 +10,8 @@
 
 # Инструкция
 Приложение хранит параметры SECRET_KEY и DEBUG в системных переменных:
-DJANGO_SECRET_KEY - секретный ключ Django
-DEBUG - состояние дебага приложения
+- DJANGO_SECRET_KEY - секретный ключ Django
+- DEBUG - состояние дебага приложения
 
 # Дополнительная настройка на проде
 https://learndjango.com/tutorials/django-static-files-and-templates
