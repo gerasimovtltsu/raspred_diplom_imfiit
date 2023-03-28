@@ -13,6 +13,8 @@
 - DJANGO_SECRET_KEY - секретный ключ Django
 - DEBUG_DJANGO - состояние дебага приложения
 
+Генератор секретных ключей: [https://djecrety.ir/](https://djecrety.ir/)
+
 # Дополнительная настройка на проде
 https://learndjango.com/tutorials/django-static-files-and-templates
 
