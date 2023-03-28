@@ -28,7 +28,6 @@ class Topic(models.Model):
     def __str__(self):
         return self.title
 
-
 class Record(models.Model):
     student_name = models.CharField(max_length=255, verbose_name='ФИО студента')
     supervisor_name = models.ForeignKey(Supervisor, on_delete=models.CASCADE, verbose_name='ФИО руководителя')
@@ -42,6 +41,7 @@ class Record(models.Model):
         limit_choices_to={'reserved_status': False},
         verbose_name = 'Наименование темы'
     )
+    record_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Запись'
