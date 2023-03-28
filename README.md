@@ -21,5 +21,5 @@ https://learndjango.com/tutorials/django-static-files-and-templates
 # Используемый стек
 1. Django [https://www.djangoproject.com/](https://www.djangoproject.com/)
 	1. Django 4.1.7
-	2. Django smart select 1.6.0
+	2. Django smart selects 1.6.0 [https://github.com/jazzband/django-smart-selects](https://github.com/jazzband/django-smart-selects)
 2. Chota CSS [https://jenil.github.io/chota/](https://jenil.github.io/chota/)
