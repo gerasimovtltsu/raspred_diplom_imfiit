@@ -39,7 +39,8 @@ class Record(models.Model):
         show_all=False,
         auto_choose=False,
         sort=True,
-        limit_choices_to={'reserved_status': False}
+        limit_choices_to={'reserved_status': False},
+        verbose_name = 'Наименование темы'
     )
 
     class Meta:
