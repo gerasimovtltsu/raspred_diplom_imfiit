@@ -29,6 +29,7 @@ env = environ.Env(
 environ.Env.read_env()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG_DJANGO')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
@@ -36,7 +37,7 @@ match DEBUG:
     case True:
         ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
     case _:
-        ALLOWED_HOSTS = []
+        ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
 
 
 # USE_DJANGO_JQUERY = True
@@ -91,8 +92,14 @@ WSGI_APPLICATION = 'RaspredDiplom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3', # локальная бд файлом
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'RaspredImfiit',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
