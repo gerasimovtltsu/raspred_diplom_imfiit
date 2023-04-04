@@ -23,3 +23,4 @@ https://learndjango.com/tutorials/django-static-files-and-templates
 	1. Django 4.1.7
 	2. Django smart selects 1.6.0 [https://github.com/jazzband/django-smart-selects](https://github.com/jazzband/django-smart-selects)
 2. Chota CSS [https://jenil.github.io/chota/](https://jenil.github.io/chota/)
+3. PostgreSQL [https://www.postgresql.org/](https://www.postgresql.org/)
