@@ -96,7 +96,7 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'RaspredImfiit',
-        'USER': 'postgres',
+        'USER': 'imfiit_user',
         'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432',
