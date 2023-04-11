@@ -29,7 +29,7 @@
 
 'HOST': 'localhost',
 
-'PORT': '', <По дефолту 5432>
+'PORT': '', ```По дефолту 5432```
 
 # Дополнительная настройка на проде
 https://learndjango.com/tutorials/django-static-files-and-templates
