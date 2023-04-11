@@ -15,6 +15,15 @@
 
 Генератор секретных ключей: [https://djecrety.ir/](https://djecrety.ir/)
 
+# Настройка бд:
+В settings.py прописать настройки для POSTGRES
+'ENGINE': 'django.db.backends.postgresql_psycopg2',
+'NAME': 'RaspredImfiit',
+'USER': '',
+'PASSWORD': '',
+'HOST': 'localhost',
+'PORT': '', <!--- По дефолту 5432 -->
+
 # Дополнительная настройка на проде
 https://learndjango.com/tutorials/django-static-files-and-templates
 
